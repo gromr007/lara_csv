@@ -49,5 +49,5 @@ window.addEventListener('scroll', handleScroll);
 document.addEventListener("DOMContentLoaded", function(event) {
     localStorage.removeItem('hashsDataCsv');
     //localStorage.clear();
-    renderContent('http://laracsv.dcr:8810/datacsvs');
+    renderContent('/datacsvs');
 });
