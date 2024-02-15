@@ -3,11 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Contracts\ParseCsv;
-use Illuminate\Http\Request;
-use App\Models\Datacsv;
-use Illuminate\Support\Facades\DB;
-
-use App\Services\ParseCsv\League\League;
 
 /**
  *

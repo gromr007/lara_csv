@@ -13,8 +13,12 @@ class ParentParseCsv
     /**
      * @param Request $request
      */
-    public function __construct(Request $request)
+    public function __construct()
     {
+        $request = request();
+        $request->validate([
+            'csv' => 'required|file|mimes:csv'
+        ]);
         $this->request = $request;
         $this->repository = new DatacsvRepository;
     }

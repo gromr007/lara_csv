@@ -17,7 +17,7 @@ class ParseCsvServiceProvider extends ServiceProvider
     {
         //Подключение реализации для контракта
             $this->app->bind(ParseCsv::class, function ($app) {
-                return new League(request());
+                return new League;
                 //return new ParSistem;
             });
     }
