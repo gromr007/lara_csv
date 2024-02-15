@@ -5,7 +5,7 @@ namespace App\Services\ParseCsv\League;
 use Illuminate\Support\Facades\DB;
 
 use App\Services\ParseCsv\ParentParseCsv;
-use App\Services\ParseCsv\ParseCsv;
+use App\Contracts\ParseCsv;
 
 class League extends ParentParseCsv implements ParseCsv
 {

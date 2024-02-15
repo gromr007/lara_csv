@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Services\ParseCsv;
-
-use Illuminate\Http\Request;
+namespace App\Contracts;
 
 interface ParseCsv
 {

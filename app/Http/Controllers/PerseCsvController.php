@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contracts\ParseCsv;
 use Illuminate\Http\Request;
 use App\Models\Datacsv;
 use Illuminate\Support\Facades\DB;
@@ -25,11 +26,9 @@ class PerseCsvController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ParseCsv $parser)
     {
-        $parser = new League($request);
         $parser->parseInBase();
-
         return redirect()->back();
     }
 }
