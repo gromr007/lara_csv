@@ -26,15 +26,6 @@
                 </tr>
             </thead>
             <tbody class="content">
-                {{--                LAZY LOAD API--}}
-                {{--                <?php //dd($paginator) ?>--}}
-                {{--                @foreach ($paginator['data'] as $elem)--}}
-                {{--                    <tr>--}}
-                {{--                        @foreach($elem as $prop)--}}
-                {{--                            <td>{{$prop}}</td>--}}
-                {{--                        @endforeach--}}
-                {{--                    </tr>--}}
-                {{--                @endforeach--}}
             </tbody>
         </table>
         <div class="end"></div>
