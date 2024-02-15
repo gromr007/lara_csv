@@ -23,13 +23,13 @@ return new class extends Migration
             $table->string('level_three'); //Уровень3 ''
             $table->string('price'); //Цена '346'
             $table->string('priceSP'); //ЦенаСП '75'
-            $table->string('quantity'); //Количество '339'
-            $table->string('properties'); //Поля свойств '45'
+            $table->integer('quantity'); //Количество '339'
+            $table->text('properties'); //Поля свойств '45'
             $table->string('joint_sale'); //Совместные покупки ''
             $table->string('unit'); //Единица измерения 'шт'
-            $table->string('picture'); //Картинка '_MG_8088'
-            $table->string('home'); //Выводить на главной ''
-            $table->string('description'); //Описание '0'
+            $table->text('picture'); //Картинка '_MG_8088'
+            $table->tinyInteger('home'); //Выводить на главной ''
+            $table->text('description'); //Описание '0'
 
             $table->timestamps();
         });

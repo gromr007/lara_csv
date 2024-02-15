@@ -39,9 +39,9 @@
 
 					// Images (in the format of 'url': 'alignment').
 						images: {
-							'images/bg01.jpg': 'center',
-							'images/bg02.jpg': 'center',
-							'images/bg03.jpg': 'center'
+							'/img/bg01.jpg': 'center',
+							'/img/bg02.jpg': 'center',
+							'/img/bg03.jpg': 'center'
 						},
 
 					// Delay.
@@ -141,6 +141,7 @@
 			// Note: If you're *not* using AJAX, get rid of this event listener.
 				$form.addEventListener('submit', function(event) {
 
+                    console.log('Отправляем!');
 					event.stopPropagation();
 					event.preventDefault();
 
@@ -153,6 +154,9 @@
 					// Process form.
 					// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
 					// but there's enough here to piece together a working AJAX submission call that does.
+
+                        $form.submit();
+
 						window.setTimeout(function() {
 
 							// Reset form.

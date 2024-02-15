@@ -21,7 +21,6 @@ class DataCsvPaginateResource extends ResourceCollection
 
     public function toArray($request): array
     {
-//dd($this);
         return [
             'articles' => $this->collection,
             'count' => $this->count(),
