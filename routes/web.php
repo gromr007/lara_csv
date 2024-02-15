@@ -8,5 +8,5 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", [HomeController::class, 'index'])->name('getCsv');
 Route::get("/datacsvs", [HomeController::class, 'indexJson'])->name('getCsvJson');
 
-Route::get("/upload", [PerseCsvController::class, 'index'])->name('uploadCsv');
+Route::get("/edit", [PerseCsvController::class, 'edit'])->name('editCsv');
 Route::post("/upload", [PerseCsvController::class, 'store'])->name('uploadStoreCsv');

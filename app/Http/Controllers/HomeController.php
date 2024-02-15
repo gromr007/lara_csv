@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\DataCsvPaginateResource;
 use App\Models\Datacsv;
+use App\Repositories\DatacsvRepository;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,20 +15,16 @@ class HomeController extends Controller
      * */
     public function index()
     {
-        $paginator = Datacsv::select("code","name","level_one","level_two","level_three","price","priceSP","quantity","properties","joint_sale","unit","picture","home","description")->paginate(10)->toArray();
-
-        return view('home')
-            ->with('paginator', $paginator)
-            ->with('activePage', 'home');
+        return view('home')->with('activePage', 'home');
     }
 
     /**
      *
      * */
-    public function indexJson(Request $request)
+    public function indexJson(Request $request, DatacsvRepository $repDatacsv)
     {
-        $paginator = Datacsv::select('id',"code","name","level_one","level_two","level_three","price","priceSP","quantity","properties","joint_sale","unit","picture","home","description")
-            ->cursorPaginate(10);
+        $paginator = $repDatacsv->cursorPaginate();
+
         return new DataCsvPaginateResource($paginator);
     }
 
